@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="br" value="firefox"/>
+  <parameter name="url" value="https://demo.guru99.com/selenium/newtours/"/>
+  <listeners>
+    <listener class-name="com.qa.utility.TestNGlistener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.qa.testLayer.TestSignIn">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="startLogger"/>
+          <include name="VerifySignin"/>
+        </methods>
+      </class> <!-- com.qa.testLayer.TestSignIn -->
+      <class name="com.qa.testLayer.TestLoginPage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="startLogger"/>
+          <include name="Verifylogin"/>
+        </methods>
+      </class> <!-- com.qa.testLayer.TestLoginPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
